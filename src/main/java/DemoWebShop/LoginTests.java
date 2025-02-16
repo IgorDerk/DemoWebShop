@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class LoginTests extends TestBase {
 
-    @Test
+    @Test(invocationCount = 1)
     public void loginExistedUserPositiveTest() {
         clickOnLoginLink();
         typeEmail("derk.i26252@gmail.com");
@@ -13,5 +13,7 @@ public class LoginTests extends TestBase {
         clickOnLoginButton();
         checkLogin();
     }
+
+
 
 }

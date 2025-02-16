@@ -71,4 +71,13 @@ public class TestBase {
         Assert.assertFalse(isElementPresent(By.xpath("//input[@value='Continue']"))); /* Проверяем,
         что кнопка "Continue" НЕ появилась */
     }
+
+    public void login(String email, String password){
+        clickOnLoginLink();
+        typeEmail(email);
+        typePassword(password);
+        clickOnRememberMe();
+        clickOnLoginButton();
+
+    }
 }
